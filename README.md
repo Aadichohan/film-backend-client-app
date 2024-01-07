@@ -1,5 +1,5 @@
 # Film App
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]1.0
+[![Build Status]1.0]
 
 ## Features
 
