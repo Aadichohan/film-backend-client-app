@@ -1,0 +1,55 @@
+<!-- <form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label>Email:</label>
+  <input type="text" formControlName="username"  required/>
+
+   <div *ngIf="loginForm.get('username')?.hasError('required') && this.loginForm.get('username')?.touched">
+    Email is required.
+  </div> -->
+  <!-- <div *ngIf="loginForm.get('email').hasError('email') && loginForm.get('email').touched">
+    Please enter a valid email address.
+  </div> -->
+
+  <!-- <label>Password:</label>
+  <input type="password" formControlName="password" />
+
+  <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+    Password is required.
+  </div>
+  <div *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched">
+    Password must be at least 6 characters long.
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+ 
+</form> -->
+
+<form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" formControlName="email" required/>
+      <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched" class="error-message">
+        Email is required.
+      </div>
+      <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="error-message">
+        invalid email.
+    </div>
+    </div>
+  
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" formControlName="password" />
+      <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched" class="error-message">
+        Password is required.
+      </div>
+      <div *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched" class="error-message">
+        Password must be at least 6 characters long.
+      </div>
+    </div>
+
+    <div class="create-account-link">
+      Don't have an account? <a href="/auth/signup">Create an account</a>
+    </div>
+  
+    <button type="submit" [disabled]="loginForm.invalid" class="submit-button">Login</button>
+  </form>
+  

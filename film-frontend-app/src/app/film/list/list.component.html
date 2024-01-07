@@ -1,0 +1,21 @@
+<!-- src/app/movie-listing/movie-listing.component.html -->
+<app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
+<div class="content-container">
+    <div class="search-container">
+        <input type="text" placeholder="Search movies" (input)="searchMovies($event)" class="search-input">
+    </div>
+    <div *ngFor="let movie of filteredMovies" class="movie-card">
+      <a routerLink="/film/{{ movie.id }}">
+        <img [src]="movie.photo" alt="{{ movie.name }} Image">
+        <div class="movie-details">
+          <h2>{{ movie.name }}</h2>
+          <p>{{ movie.description }}</p>
+          <p><i class="fas fa-calendar-alt"></i> Release Date: {{ movie.release_date }}</p>
+          <p><i class="fas fa-ticket-alt"></i> Ticket Price: ${{ movie.ticket_price }}</p>
+          <p><i class="fas fa-globe"></i> Country: {{ movie.country }}</p>
+          <p><i class="fas fa-film"></i> Genre: {{ movie.genre }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  

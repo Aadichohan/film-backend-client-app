@@ -1,0 +1,88 @@
+/* src/app/movie-listing/movie-listing.component.css */
+
+div {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .movie-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .movie-details {
+    padding: 15px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #2980b9;
+  }
+
+  /* src/app/movie-listing/movie-listing.component.css */
+
+.content-container {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Optional: Add styles for input focus */
+.search-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Add additional styling as needed */
+
+  
+  
